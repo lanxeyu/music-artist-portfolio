@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import adventureLogo from './assets/album-adventure.png'
-import goodFaithLogo from './assets/album-goodfaith.png'
+import adventureCover from './assets/album-adventure.png'
+import goodFaithCover from './assets/album-goodfaith.png'
 import './App.css'
 
 function App() {
@@ -9,18 +9,22 @@ function App() {
   return (
     <>
       <h1>Madeon</h1>
-      <div>
-        <a href="https://www.youtube.com/watch?v=qQWAicHiVhk&list=OLAK5uy_lDOTreSaPIgYwjZZUUPOEwaTYSlr45o00" target="_blank">
-          <img src={goodFaithLogo} className="logo" alt="Good Faith album logo" />
-          <h2>Good Faith</h2>
-        </a>
 
-        <a href="https://www.youtube.com/watch?v=rO1bZdtto7I&list=OLAK5uy_lEX2ZWJ-FoqZ3jcWIGciMFASauDCOAiEA" target="_blank">
-          <img src={adventureLogo} className="logo react" alt="Adeventure album logo" />
-          <h2>Adventure</h2>
-        </a>
+      <section id="albums">
+      <Album
+          link="https://www.youtube.com/watch?v=qQWAicHiVhk&list=OLAK5uy_lDOTreSaPIgYwjZZUUPOEwaTYSlr45o00"
+          text="Good Faith"
+          cover={goodFaithCover}
+          altText="Good Faith album cover"
+      />    
 
-      </div>
+      <Album
+          link="https://www.youtube.com/watch?v=rO1bZdtto7I&list=OLAK5uy_lEX2ZWJ-FoqZ3jcWIGciMFASauDCOAiEA"
+          text="Adventure"
+          cover={adventureCover}
+          altText="Adventure album cover"
+      />
+      </section>
       
       <div className="card">
         {/* <button onClick={() => setCount((count) => count + 1)}>
@@ -37,4 +41,14 @@ function App() {
   )
 }
 
-export default App
+function Album({link, text, cover, altText}) {
+  return (
+    <a href={link} target="_blank">
+          <img src={cover} className="logo" alt={altText} />
+          <h2>{text}</h2>
+        </a>
+  )
+
+}
+
+export { App, Album}
