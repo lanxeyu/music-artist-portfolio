@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import React from "react";
 import adventureCover from './assets/album-adventure.png'
 import goodFaithCover from './assets/album-goodfaith.png'
 import madeonLogo from './assets/madeon-logo.webp'
+import { Album } from './components';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -33,32 +34,11 @@ function App() {
         </div>
       </section>
       
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+      
     </>
   )
 }
 
-function Album({link, text, cover, altText}) {
-  const albumStyle = {
-    // Insert styling here
-  };
-  return (
-    <a href={link} target="_blank" style={albumStyle}>
-          <img src={cover} className="logo" alt={altText} />
-          <p class="albumName">{text}</p>
-        </a>
-  )
-}
 
 
-export { App, Album}
+export default App;
