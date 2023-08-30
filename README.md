@@ -1,4 +1,4 @@
-![Madeon logo](madeon.jpg)
+![Madeon logo](./src/assets/madeon.jpg)
 
 # Madeon
 
