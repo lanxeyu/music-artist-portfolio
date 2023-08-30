@@ -1,4 +1,8 @@
-# Music Portfolio Web App
+![Madeon logo](madeon.jpg)
+
+# Madeon
+
+A web app showcasing Madeon's albums and songs. In progress...
 
 ## How to run locally
 1. Clone this repo: `git clone git@github.com:lanxeyu/music-portfolio-react.git`
