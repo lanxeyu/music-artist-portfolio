@@ -1,5 +1,5 @@
 import React from "react";
-import { adventureCover, goodFaithCover, madeonLogo} from './assets/index.js'
+import { adventureCover, goodFaithCover, madeonLogo} from './assets'
 import { Album } from './components';
 import './App.css'
 
